@@ -3242,17 +3242,17 @@ node-releases@^1.1.70:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
   integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
-nonplain-md-link@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/nonplain-md-link/-/nonplain-md-link-0.0.5.tgz#167e3e769e1b9224bd713f8597c4df19ce89fde5"
-  integrity sha512-pqaPZ2xzVBr8EQnluhK1XPnNTVgabeII15WNJJ2PWhrBiz5nDXgqX6L466I5AAkXJx3JF2veOsg5Te+9B6eClw==
+nonplain-md-link@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/nonplain-md-link/-/nonplain-md-link-0.0.6.tgz#04a7fdd743443820c9c50366ef37ee1dc7cf1b4f"
+  integrity sha512-RDFRO53bzb0W/dqmxNwJRqeN+TvIxBjmLaX4PNiNmEpRmrikO5tqCVDDEaPp9UbuZhaWRqxgqtpYXmLb4CZKSg==
   dependencies:
-    nonplain "^0.0.2"
+    nonplain "^0.0.3"
 
-nonplain@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/nonplain/-/nonplain-0.0.2.tgz#79676a64cd047a6272093ac5eb7968a3b764d3c1"
-  integrity sha512-w83NR7KxRv6H4bJ0YwuYirmgTttlRE/pFG8ZjMvJmNundGUUEBowJYIf57OQhACgLrFTKUB90aVi3f7vVWNYPA==
+nonplain@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/nonplain/-/nonplain-0.0.3.tgz#dbdc9a5aaf11ebfab1e563ce36c64349bda69f6c"
+  integrity sha512-V2aXDMCfvRuu/eRPdxn9WNtK0r5KGIyfS1eSjLMG/SemehHgCdKcbZhAOtKdnZsrYLftc6Y3kO4msVgpRG7dIw==
   dependencies:
     glob "^7.1.6"
     js-yaml "^3.14.1"
