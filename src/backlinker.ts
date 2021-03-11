@@ -5,7 +5,11 @@ import { Link } from 'nonplain-md-link';
 import { BacklinkerOptions } from './types';
 
 export default function backlinker(files: Files, options?: BacklinkerOptions) {
-  const defaultKeyFn = (dir: string, name: string): string => nodePath.join(dir, name);
+  const defaultKeyFn = (directory: string, path: string): string => {
+    const fullLinkPath = nodePath.join(directory, path);
+    const { dir, name } = nodePath.parse(fullLinkPath);
+    return nodePath.join(dir, name);
+  };
 
   const { keyFn = defaultKeyFn } = options || {};
 
@@ -13,8 +17,8 @@ export default function backlinker(files: Files, options?: BacklinkerOptions) {
     .reduce((backlinks: Record<string, any>, { body, metadata }: FileData) => {
       const { file: { dir } } = metadata;
 
-      Link.collectAllLinksFromContent(body).forEach(({ path: linkPath }: Link) => {
-        const key = keyFn(dir, linkPath);
+      Link.collectAllLinksFromContent(body).forEach(({ path }: Link) => {
+        const key = keyFn(dir, path);
 
         backlinks[key] = backlinks[key] || [];
         backlinks[key].push({ ...metadata });
