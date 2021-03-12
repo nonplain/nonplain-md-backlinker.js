@@ -104,5 +104,5 @@ const { backlinker } = require("nonplain-md-backlinker");
 
 ## Contributing
 
-These tools are in progress. If your use-case requires specific functionality from this library, please contact me and we'll see what we can do together. Thanks!
+If your use-case requires specific functionality from this library, please contact me and we'll see what we can do together. Thanks!
 
