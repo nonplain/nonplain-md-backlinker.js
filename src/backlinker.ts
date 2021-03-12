@@ -11,7 +11,7 @@ export default function backlinker(files: Files, options?: BacklinkerOptions) {
     return nodePath.join(dir, name);
   };
 
-  const { keyFn = defaultKeyFn } = options || {};
+  const { keyFn = defaultKeyFn, metadataProperty = 'backlinks' } = options || {};
 
   const backlinksMap: Record<string, any> = files
     .reduce((backlinks: Record<string, any>, { body, metadata }: FileData) => {
@@ -29,7 +29,7 @@ export default function backlinker(files: Files, options?: BacklinkerOptions) {
 
   files.transform({
     metadata: {
-      backlinks: ({ file }: Metadata) => backlinksMap[keyFn(file.dir, file.name)] || [],
+      [metadataProperty]: ({ file }: Metadata) => backlinksMap[keyFn(file.dir, file.name)] || [],
     },
   });
 }
