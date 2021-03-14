@@ -9,9 +9,9 @@ import { backlinker } from '../dist';
 import { expectedBacklinks } from './fixtures/files/expected';
 
 describe('Backlinker', () => {
-  test('generates backlinks for files', async () => {
+  test('generates backlinks for files', () => {
     const glob = path.join(__dirname, './fixtures/files/src/**/*.md');
-    const files = await new Files().load(glob);
+    const files = new Files().load(glob);
 
     backlinker(files);
 
@@ -20,9 +20,9 @@ describe('Backlinker', () => {
     expect(backlinksMap).toEqual(expectedBacklinks);
   });
 
-  test('generates backlinks for files using a custom keyFn', async () => {
+  test('generates backlinks for files using a custom keyFn', () => {
     const glob = path.join(__dirname, './fixtures/files/src/**/*.md');
-    const files = await new Files().load(glob);
+    const files = new Files().load(glob);
 
     let called = false;
     const customKeyFn = (directory: string, linkPath: string): string => {
@@ -41,9 +41,9 @@ describe('Backlinker', () => {
     expect(called).toBeTruthy();
   });
 
-  test('generates backlinks for files using a custom metadataProperty', async () => {
+  test('generates backlinks for files using a custom metadataProperty', () => {
     const glob = path.join(__dirname, './fixtures/files/src/**/*.md');
-    const files = await new Files().load(glob);
+    const files = new Files().load(glob);
 
     const customProperty = 'custom';
     backlinker(files, { metadataProperty: customProperty });

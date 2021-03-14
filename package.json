@@ -20,9 +20,9 @@
     "lint:fix": "yarn lint --fix",
     "pub": "yarn test && yarn publish && git push origin master"
   },
-  "dependencies": {
-    "nonplain": "^0.0.4",
-    "nonplain-md-link": "^0.0.7"
+  "peerDependencies": {
+    "nonplain": "^0.0.5",
+    "nonplain-md-link": "^0.0.8"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.0",

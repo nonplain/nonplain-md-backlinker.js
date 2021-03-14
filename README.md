@@ -26,13 +26,11 @@ Example:
 const { Files } = require("nonplain");
 const { backlinker } = require("nonplain-md-backlinker");
 
-(async () => {
-  const files = await new Files().load('/path/to/dir/**/*.md');
-  
-  backlinker(files);
-  
-  console.log(files.collect());
-})();
+const files = new Files().load('/path/to/dir/**/*.md');
+
+backlinker(files);
+
+console.log(files.collect());
 
 // Output:
 //
