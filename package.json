@@ -22,7 +22,7 @@
   },
   "peerDependencies": {
     "nonplain": "^0.0.5",
-    "nonplain-md-link": "^0.0.9"
+    "nonplain-md-link": "^0.0.10"
   },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.0",

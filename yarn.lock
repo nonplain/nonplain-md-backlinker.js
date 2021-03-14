@@ -3242,10 +3242,10 @@ node-releases@^1.1.70:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
   integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
-nonplain-md-link@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/nonplain-md-link/-/nonplain-md-link-0.0.9.tgz#950c1e6f45a9daf7a2096b5b9bf782ce3b3c9cfd"
-  integrity sha512-FZ4dU7pNT9wqCNNUOkLxtv/hhmmbyEoUlyD/BLFpGgFNIRmxOgOb2Q+PkR1OKVva4fm7Fdau5vzwe1ouaQB9gQ==
+nonplain-md-link@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/nonplain-md-link/-/nonplain-md-link-0.0.10.tgz#d7ca28ea616ec74c69970f3c617138d3a34f3ceb"
+  integrity sha512-fR9BC8di4W2U66NFthK/ThVhra697eQnzbyee2e+WR5G5e2WhsbjwRI1i3SS9jNkmmDxInxzsY+vO885gTolYw==
 
 nonplain@^0.0.5:
   version "0.0.5"
