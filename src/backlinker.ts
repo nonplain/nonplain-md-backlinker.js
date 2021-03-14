@@ -1,6 +1,6 @@
 import nodePath from 'path';
-import { Metadata, FileData, Files } from 'nonplain';
-import { Link } from 'nonplain-md-link';
+import Files, { Metadata, FileData } from 'nonplain';
+import Link from 'nonplain-md-link';
 
 import { BacklinkerOptions } from './types';
 

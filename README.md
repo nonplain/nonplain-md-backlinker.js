@@ -23,8 +23,8 @@ To generate backlinks for a group of files that link to each other, load those f
 Example:
 
 ```js
-const { Files } = require("nonplain");
-const { backlinker } = require("nonplain-md-backlinker");
+const Files = require("nonplain").default;
+const backlinker = require("nonplain-md-backlinker").default;
 
 const files = new Files().load('/path/to/dir/**/*.md');
 
