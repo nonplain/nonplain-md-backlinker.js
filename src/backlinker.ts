@@ -1,8 +1,8 @@
 import nodePath from 'path';
 import Files, { Metadata, FileData } from 'nonplain';
-import Link from 'nonplain-md-link';
 
-import { BacklinkerOptions } from './types';
+import { collectAllLinks } from './utils/context';
+import { BacklinkerOptions, MatchedLinkWithContext } from './types';
 
 export default function backlinker(files: Files, options?: BacklinkerOptions) {
   const defaultKeyFn = (directory: string, path: string): string => {
@@ -11,17 +11,29 @@ export default function backlinker(files: Files, options?: BacklinkerOptions) {
     return nodePath.join(dir, name);
   };
 
-  const { keyFn = defaultKeyFn, metadataProperty = 'backlinks' } = options || {};
+  const { keyFn = defaultKeyFn, metadataProperty = 'backlinks', context: contextOptions } = options || {};
 
   const backlinksMap: Record<string, any> = files
     .reduce((backlinks: Record<string, any>, { body, metadata }: FileData) => {
       const { file: { dir } } = metadata;
 
-      Link.collectAllLinksFromContent(body).forEach(({ path }: Link) => {
+      collectAllLinks(body, contextOptions).forEach(({
+        link,
+        ...context
+      }: MatchedLinkWithContext) => {
+        const { path } = link;
         const key = keyFn(dir, path);
 
+        let backlinkObj = { ...metadata };
+        if (Object.keys(context).length) {
+          backlinkObj = {
+            ...backlinkObj,
+            context,
+          };
+        }
+
         backlinks[key] = backlinks[key] || [];
-        backlinks[key].push({ ...metadata });
+        backlinks[key].push(backlinkObj);
       });
 
       return backlinks;

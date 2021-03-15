@@ -40,6 +40,8 @@
         "import/prefer-default-export": "off",
         "no-param-reassign": "off",
         "implicit-arrow-linebreak": "off",
-        "no-useless-escape": "off"
+        "no-useless-escape": "off",
+        "no-plusplus": "off",
+        "no-continue": "off"
     }
 }
