@@ -1,6 +1,6 @@
 {
   "name": "nonplain-md-backlinker",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Generate backlinks for nonplain files",
   "homepage": "https://github.com/nonplain/nonplain-md-backlinker.js#readme",
   "repository": "github:nonplain/nonplain-md-backlinker.js",
@@ -33,9 +33,9 @@
     "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
     "nonplain": "^0.1.0",
     "nonplain-md-link": "^0.0.10",
-    "jest": "^26.6.3",
     "ts-jest": "^26.5.3",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
