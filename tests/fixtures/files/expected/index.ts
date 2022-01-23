@@ -1,9 +1,14 @@
+import path from 'path';
+
+const srcDir = path.join(__dirname, '../src');
+const srcDirectoryDir = path.join(srcDir, '/directory');
+
 export const expectedBacklinks = {
   'Test file 1': [
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src/directory',
+        dir: srcDirectoryDir,
         base: 'Test file 4.md',
         ext: '.md',
         name: 'Test file 4',
@@ -14,7 +19,7 @@ export const expectedBacklinks = {
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src',
+        dir: srcDir,
         base: 'Test file 3.md',
         ext: '.md',
         name: 'Test file 3',
@@ -27,7 +32,7 @@ export const expectedBacklinks = {
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src/directory',
+        dir: srcDirectoryDir,
         base: 'Test file 4.md',
         ext: '.md',
         name: 'Test file 4',
@@ -38,7 +43,7 @@ export const expectedBacklinks = {
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src',
+        dir: srcDir,
         base: 'Test file 1.md',
         ext: '.md',
         name: 'Test file 1',
@@ -51,7 +56,7 @@ export const expectedBacklinks = {
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src',
+        dir: srcDir,
         base: 'Test file 1.md',
         ext: '.md',
         name: 'Test file 1',
@@ -62,7 +67,7 @@ export const expectedBacklinks = {
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src',
+        dir: srcDir,
         base: 'Test file 2.md',
         ext: '.md',
         name: 'Test file 2',
@@ -75,7 +80,7 @@ export const expectedBacklinks = {
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src',
+        dir: srcDir,
         base: 'Test file 2.md',
         ext: '.md',
         name: 'Test file 2',
@@ -86,7 +91,7 @@ export const expectedBacklinks = {
     {
       file: {
         root: '/',
-        dir: '/Users/jaredgorski/Projects/Personal/nonplain/tools/nonplain-md-backlinker.js/tests/fixtures/files/src',
+        dir: srcDir,
         base: 'Test file 3.md',
         ext: '.md',
         name: 'Test file 3',
