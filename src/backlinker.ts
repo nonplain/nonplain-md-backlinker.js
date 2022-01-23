@@ -14,6 +14,7 @@ export default function backlinker(files: Files, options?: BacklinkerOptions) {
   const { keyFn = defaultKeyFn, metadataProperty = 'backlinks', context: contextOptions } = options || {};
 
   const backlinksMap: Record<string, any> = files
+    .collect()
     .reduce((backlinks: Record<string, any>, { body, metadata }: FileData) => {
       const { file: { dir } } = metadata;
 
